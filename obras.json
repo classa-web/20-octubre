@@ -1,0 +1,27 @@
+
+[
+  {
+    "id": 1,
+    "titulo": "Distancia de rescate",
+    "anio": 2014,
+    "genero": "Novela",
+    "sinopsis": "Una mujer agoniza en una cama de hospital mientras un niño intenta reconstruir los acontecimientos que la llevaron hasta allí. Una historia inquietante sobre la maternidad, el miedo y los peligros invisibles que nos rodean.",
+    "imagen": "imagenes/distancia.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "Kentukis",
+    "anio": 2018,
+    "genero": "Novela",
+    "sinopsis": "En distintas ciudades del mundo, unos dispositivos tecnológicos con forma de peluche permiten que desconocidos observen la vida privada de otras personas. Una exploración de la intimidad, la vigilancia y las relaciones humanas.",
+    "imagen": "imagenes/kentukis.jpg"
+  },
+  {
+    "id": 3,
+    "titulo": "Pájaros en la boca",
+    "anio": 2009,
+    "genero": "Cuentos",
+    "sinopsis": "Una colección de relatos en los que situaciones aparentemente cotidianas se transforman en experiencias perturbadoras. Lo extraño irrumpe en la vida familiar y cuestiona los límites de lo normal.",
+    "imagen": "imagenes/pajaros.jpg"
+  }
+]

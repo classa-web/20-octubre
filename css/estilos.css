@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+/* VARIABLES GENERALES */
+
+:root {
+    --fondo: #111111;
+    --superficie: #1c1c1c;
+    --texto: #eae7e0;
+    --secundario: #99958f;
+    --acento: #a53d35;
+    --linea: #383838;
+}
+
+/* RESETEO */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 6%;
+    border-bottom: 1px solid var(--linea);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.etiqueta {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--secundario);
+}
+
+/* PRESENTACIÓN */
+
+.presentacion {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 6%;
+}
+
+.subtitulo {
+    color: var(--acento);
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(60px, 10vw, 160px);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -4px;
+}
+
+.punto {
+    color: var(--acento);
+}
+
+.descripcion {
+    max-width: 430px;
+    margin-top: 45px;
+    color: var(--secundario);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* BIBLIOTECA */
+
+.biblioteca {
+    padding: 70px 6% 120px;
+    background-color: var(--superficie);
+}
+
+.seccion-titulo {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--linea);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--secundario);
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+#navegacion-obras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 40px 0;
+}
+
+.boton-obra {
+    padding: 15px 25px;
+    border: 1px solid var(--linea);
+    background: transparent;
+    color: var(--texto);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-obra:hover {
+    background: var(--texto);
+    color: var(--fondo);
+    transform: translateY(-3px);
+}
+
+.boton-obra.activo {
+    background: var(--acento);
+    border-color: var(--acento);
+    color: white;
+}
+
+/* DETALLE DE LA OBRA */
+
+#detalle-obra {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding-top: 40px;
+}
+
+.portada-obra {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.portada-obra:hover {
+    filter: grayscale(0%);
+}
+
+.informacion-obra {
+    max-width: 550px;
+}
+
+.anio-obra {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--acento);
+}
+
+.titulo-obra {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 65px);
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.sinopsis-obra {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--secundario);
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 35px 6%;
+    border-top: 1px solid var(--linea);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--secundario);
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .presentacion {
+        min-height: 60vh;
+        padding: 80px 6%;
+    }
+
+    h1 {
+        font-size: clamp(40px, 11vw, 80px);
+        letter-spacing: -2px;
+    }
+
+    #detalle-obra {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+    }
+
+    .portada-obra {
+        width: 220px;
+    }
+
+    .etiqueta {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
